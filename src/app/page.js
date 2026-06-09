@@ -1,7 +1,13 @@
+import RoomCards from "@/components/RoomCards";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+   const allRooms = await fetch('http://localhost:5000/all-rooms')
+    const dataOfRooms = await allRooms.json()
   return (
-    <h1 className="text-5xl text-center text-gray-500"> Salam </h1>
+    <>
+    <div className="grid grid-cols-3 gap-4">{dataOfRooms.map(singleRoom => <RoomCards key={singleRoom._id} singleRoom={singleRoom}></RoomCards> )}</div>
+    
+    </>
   );
 }
