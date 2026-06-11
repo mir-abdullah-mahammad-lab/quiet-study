@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import React from 'react';
-
+import {Chip} from "@heroui/react";
+import { Button } from '@heroui/react';
+import Link from 'next/link';
 const RoomCards = ({ singleRoom }) => {
     console.log(singleRoom, 'Single Room details')
     const {_id, image, name, description, floor, seatCapacity, hourlyRate, amenities } = singleRoom
@@ -13,16 +14,21 @@ const RoomCards = ({ singleRoom }) => {
                 height={250} className='w-[250] h-[250]'></Image>
             <h2 className='italic text-3xl text-blue-500'>{name}</h2>
             <p>{description}</p>
-            <div className='flex justify-around w-full'>
-                <div className='flex flex-col items-center justify-center'>
-                    <p>{floor}</p>
-                    <p>{seatCapacity}</p>
-                    <p>{hourlyRate}</p>
+            <div className='flex flex-col gap-5 justify-around w-full m-5'>
+                <div className='flex items-center justify-center gap-2'>
+                    <Chip color="accent">{floor}</Chip>
+                    <Chip color="accent">{seatCapacity}</Chip>
+                    <Chip color="accent">{hourlyRate}</Chip>
+                    
                 </div>
-                <div className='text-red-950'>
-                    {amenities.map(a => <li >{a}</li>)}
+                <div className='flex gap-2'>
+                    {amenities.map((a,index) => <Chip key={index} color="success" className='text-center'>{a}</Chip>)}
                 </div>
             </div>
+
+            <Button variant="tertiary">
+                    <Link href={`/rooms/${_id}`} className='text-red-600'>View Details</Link>
+                </Button>
 
 
         </div>
