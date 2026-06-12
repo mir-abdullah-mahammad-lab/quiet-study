@@ -3,7 +3,7 @@ import {Chip} from "@heroui/react";
 import { Button } from '@heroui/react';
 import Link from 'next/link';
 const RoomCards = ({ singleRoom }) => {
-    console.log(singleRoom, 'Single Room details')
+    // console.log(singleRoom, 'Single Room details')
     const {_id, image, name, description, floor, seatCapacity, hourlyRate, amenities } = singleRoom
     return (
         <div className='min-w-50 min-h-50 bg-linear-to-t from-blue-200 to-blue-500 flex flex-col items-center justify-center p-5'>

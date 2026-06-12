@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 
-const HeroPage = () => {
+const HeroPage = async () => {
     return (
         <div className='min-w-50 min-h-50 bg-linear-to-r from-blue-200 to-blue-500 flex justify-end'>
             <div className='w-auto flex flex-col justify-center'>
