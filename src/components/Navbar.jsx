@@ -9,8 +9,8 @@ const Navbar = () => {
     const { data: session } = authClient.useSession()
     const user = session?.user;
     const {name, email, image} =  user || {}
-    console.log(user,'user data from mong db')
-    console.log(name, email,image)
+    // console.log(user,'user data from mong db')
+    // console.log(name, email,image)
 
     
 
@@ -33,10 +33,13 @@ const Navbar = () => {
                     <Link href={'/rooms'}>Rooms</Link>
                 </Button>
                 <Button variant="tertiary">
-                    <Link href={'/rooms'}>My Listing</Link>
+                    <Link href={'/add-rooms'}>Add-Rooms</Link>
                 </Button>
                 <Button variant="tertiary">
-                    <Link href={'/rooms'}>My Booking</Link>
+                    <Link href={'/my-listing'}>My Listing</Link>
+                </Button>
+                <Button variant="tertiary">
+                    <Link href={'/my-booking'}>My Booking</Link>
                 </Button>
             </div>
             

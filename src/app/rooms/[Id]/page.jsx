@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Card, Chip } from "@heroui/react";
+
 const RoomDetails = async ({ params }) => {
     const { Id } = await params
     // console.log('id of the room',Id)
