@@ -2,6 +2,10 @@ import Image from 'next/image';
 import {Chip} from "@heroui/react";
 import { Button } from '@heroui/react';
 import Link from 'next/link';
+
+
+
+
 const RoomCards = ({ singleRoom }) => {
     // console.log(singleRoom, 'Single Room details')
     const {_id, image, name, description, floor, seatCapacity, hourlyRate, amenities } = singleRoom
@@ -22,7 +26,7 @@ const RoomCards = ({ singleRoom }) => {
                     
                 </div>
                 <div className='flex gap-2'>
-                    {amenities.map((a,index) => <Chip key={index} color="success" className='text-center'>{a}</Chip>)}
+                    {amenities?.map((a,index) => <Chip key={index} color="success" className='text-center'>{a}</Chip>)}
                 </div>
             </div>
 

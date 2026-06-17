@@ -1,7 +1,7 @@
 import RoomCards from "@/components/RoomCards";
 
 const allLibraryRooms = async () => {
-    const allRooms = await fetch('http://localhost:5000/all-rooms')
+    const allRooms = await fetch('http://localhost:5000/all-rooms/private')
     const dataOfRooms = await allRooms.json()
     // console.log(dataOfRooms)
     return (
