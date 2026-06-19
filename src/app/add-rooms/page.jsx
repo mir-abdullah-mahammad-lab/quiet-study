@@ -6,6 +6,7 @@ import {
 } from "@heroui/react";
 import { redirect } from 'next/navigation';
 import { useState } from "react";
+import toast from 'react-hot-toast';
 
 const RoomAdding = () => {
     const [selected, setSelected] = useState(['']);
@@ -29,7 +30,8 @@ const RoomAdding = () => {
 
         const data = await res.json()
 
-        console.log('data from the server', data)
+        // console.log('data from the server', data)
+        toast.success(" Your Room Added Sucessfully!! ")
         if(data){
             redirect('/rooms')
         }

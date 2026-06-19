@@ -10,7 +10,7 @@ const RoomDetails = async ({ params }) => {
     const roomDetailsById = await fetch(`http://localhost:5000/all-rooms/${Id}`)
 
     const roomDetails = await roomDetailsById.json()
-    // console.log(`this is the single room details by id:`, roomDetails)
+     
     const { _id, image, name, description, floor, seatCapacity, hourlyRate, amenities } = roomDetails
     return (
         <div className="min-w-7xl mx-auto flex flex-col justify-center items-center">

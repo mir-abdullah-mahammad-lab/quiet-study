@@ -1,9 +1,19 @@
-import React from 'react';
+'use client'
 
-const myRoomListing = () => {
+import { authClient } from "@/lib/auth-client";
+
+const myRoomListing =  () => {
+       
+        const {data : session } = authClient.useSession()
+        const n = {current_user :  session?.user?.name}
+        const user = n.current_user
+        
+
+        
+    
     return (
         <div>
-            <h1 className='text-white'>my room listing details</h1>
+          this is mylisting
         </div>
     );
 };

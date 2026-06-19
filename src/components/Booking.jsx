@@ -3,7 +3,8 @@
 import { Form, DateField, Label, Description, FieldError, TimeField, Button } from "@heroui/react";
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
-import { userAc } from "better-auth/plugins/admin/access";
+import { redirect } from "next/navigation";
+
 
 const Booking = ({roomDetails}) => {
     const [date, setDate] = useState()
@@ -33,6 +34,11 @@ const Booking = ({roomDetails}) => {
                     body: JSON.stringify(timeSlot)
                 })
 
+                const returned_data = await reqPost.json()
+                console.log(returned_data)
+                if(returned_data){
+                    redirect('/my-listing')
+                }
                
                 
                 // console.log(timeSlot, 'this is timesold booked by user')

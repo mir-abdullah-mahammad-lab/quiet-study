@@ -6,11 +6,11 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const HeroPage =  () => {
     return (
-        <div className='min-w-50 min-h-50 bg-linear-to-r from-blue-200 to-blue-500 flex justify-end'>
+        <div className='min-w-50 min-h-50 bg-linear-to-r from-gray-700 to-blue-500 flex justify-end'>
             <div className='w-auto flex flex-col justify-center'>
-                <h1 className='p-10 italic text-7xl bg-linear-to-r from-gray-400 to-gray-900 bg-clip-text text-transparent'>Quiet Spaces. Better Focus. Easy Booking. </h1>
+                <h1 className='p-10 italic text-7xl text-red-100'>Quiet Spaces. Better Focus. Easy Booking. </h1>
 
-                <h1 className='pl-10 text-xl text-gray-900'>Browse available study rooms, choose your preferred time slot,<br />
+                <h1 className='pl-10 text-xl text-red-100'>Browse available study rooms, choose your preferred time slot,<br />
                     and book your ideal workspace in seconds.
                 </h1>
                 <div className='p-10 flex items-center gap-5'>
