@@ -13,17 +13,17 @@ const Booking = ({roomDetails}) => {
      const { _id, image, hourlyRate} = roomDetails
 
      const {data:session} = authClient.useSession()
-    //  console.log(session?.user.name, 'yaoooo bro are u theree')
-     const user = session?.user.name
+     console.log(session?.user?.id, 'yaoooo bro are u theree')
+     const userId = session?.user?.id
 
    const handleSubmit = async (e)=>{
                 e.preventDefault()
                 const timeSlot = {
-                    user: user,
+                    userId: userId,
+                    roomId:_id,
                     date : date?.toString(),
                     startTime: startTime?.toString(),
                     endTime : endTime?.toString(),
-                    _id :_id,
                     image: image,
                     hourlyRate: hourlyRate
                 }
