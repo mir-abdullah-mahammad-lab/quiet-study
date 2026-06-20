@@ -3,7 +3,7 @@ import RoomCards from "@/components/RoomCards";
 
 
 export default async function Home() {
-  const allRooms = await fetch('http://localhost:5000/all-rooms')
+  const allRooms = await fetch(`${process.env.BACKEND_SERVER}/all-rooms`)
   const dataOfRooms = await allRooms.json()
   return (
     <>
