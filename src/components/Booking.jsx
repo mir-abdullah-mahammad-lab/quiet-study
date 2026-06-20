@@ -13,7 +13,6 @@ const Booking = ({roomDetails}) => {
      const { _id, image, hourlyRate} = roomDetails
 
      const {data:session} = authClient.useSession()
-     console.log(session?.user?.id, 'yaoooo bro are u theree')
      const userId = session?.user?.id
 
    const handleSubmit = async (e)=>{
@@ -28,7 +27,7 @@ const Booking = ({roomDetails}) => {
                     hourlyRate: hourlyRate
                 }
 
-                const reqPost =  await fetch('http://localhost:5000/personal-booking',{
+                const reqPost =  await fetch(`${process.env.BACKEND_SERVER}/personal-booking`,{
                     method:'POST',
                     headers: { "content-type":"application/json"},
                     body: JSON.stringify(timeSlot)

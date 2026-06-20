@@ -9,8 +9,7 @@ const Navbar = () => {
     const { data: session } = authClient.useSession()
     const user = session?.user;
     const {name, email, image} =  user || {}
-    // console.log(user,'user data from mong db')
-    // console.log(name, email,image)
+  
 
     
 

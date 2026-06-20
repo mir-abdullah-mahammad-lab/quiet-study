@@ -20,7 +20,7 @@ const RoomAdding = () => {
         // console.log(collectedDataObj)
 
 
-        const res = await fetch('http://localhost:5000/add-rooms', {
+        const res = await fetch(`${process.env.BACKEND_SERVER}/add-rooms`, {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

@@ -13,7 +13,7 @@ const MyRoomListing =  () => {
         
        useEffect(()=>{
          const fetch_user_booked_rooms= async () =>{
-                const all_rooms = await fetch(`http://localhost:5000/personal-all-bookings/${n}`)
+                const all_rooms = await fetch(`${process.env.BACKEND_SERVER}/personal-all-bookings/${n}`)
                 const all_rooms_json = await all_rooms.json()
                 setRooms(all_rooms_json)
                 

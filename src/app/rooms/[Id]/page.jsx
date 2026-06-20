@@ -7,7 +7,7 @@ const RoomDetails = async ({ params }) => {
     const { Id } = await params
     // console.log('id of the room',Id)
 
-    const roomDetailsById = await fetch(`http://localhost:5000/all-rooms/${Id}`)
+    const roomDetailsById = await fetch(`${process.env.BACKEND_SERVER}/all-rooms/${Id}`)
 
     const roomDetails = await roomDetailsById.json()
      
